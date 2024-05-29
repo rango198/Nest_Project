@@ -1,5 +1,5 @@
 import { ApiProperty } from "@nestjs/swagger"
-import { IsEmail, IsEmpty } from "class-validator"
+import { IsEmail, IsEmpty, IsString } from "class-validator"
 
 export class SignUpBodyDto {
 
@@ -12,7 +12,7 @@ export class SignUpBodyDto {
   @ApiProperty({
     example: '12345'
   })
-  @IsEmpty()
+  @IsString()
   password: string
 }
 
