@@ -1,5 +1,4 @@
 import { Injectable } from '@nestjs/common';
-import { UpdateUserDto } from './dto/update-user.dto';
 import { DbService } from 'src/db/db.service';
 import { AccountService } from 'src/account/account.service';
 

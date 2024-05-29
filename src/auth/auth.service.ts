@@ -1,7 +1,6 @@
 import { Injectable, BadRequestException, UnauthorizedException } from '@nestjs/common';
 import { UsersService } from 'src/users/users.service';
 import { PasswordService } from './password.service';
-import { SignInBodyDto, SignUpBodyDto } from './dto/auth.dto';
 import { JwtService } from '@nestjs/jwt/dist';
 
 
