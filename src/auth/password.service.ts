@@ -1,13 +1,13 @@
-import { Injectable } from '@nestjs/common';
-import { pbkdf2Sync, randomBytes } from 'crypto';
+import { Injectable } from '@nestjs/common'
+import { pbkdf2Sync, randomBytes } from 'crypto'
 
 @Injectable()
 export class PasswordService {
-  getSalt() {
-    return randomBytes(16).toString('hex');
-  }
+	getSalt() {
+		return randomBytes(16).toString('hex')
+	}
 
-  getHash(password: string, salt: string) {
-    return pbkdf2Sync(password, salt, 10, 64, 'sha512').toString('hex')
-  }
+	getHash(password: string, salt: string) {
+		return pbkdf2Sync(password, salt, 10, 64, 'sha512').toString('hex')
+	}
 }
